@@ -21,8 +21,10 @@ class EvenAndOdd extends Component {
         var evens = [];
         var odds = [];
 
-        evens = arr.filter((val) => val % 2 === 0);
-        odds = arr.filter((val) => val % 2 === 1);
+        evens = arr.filter((val) => val % 2 === 0).map((val) => +val);
+        odds = arr.filter((val) => val % 2 === 1).map((val) => +val);
+        console.log(evens)
+        console.log(odds)
         
         this.setState({ evenArray: evens, oddArray: odds });
     }
